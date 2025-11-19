@@ -23,21 +23,26 @@ MemoryJournal/
 
 ## Requirements
 - Android Studio Ladybug (or newer) with the Android SDK 34 platform and build tools installed.
-- Java 17 configured for Gradle builds.
-- Local Gradle 8.6+ installation (Android Studio bundles one) because the binary Gradle wrapper is intentionally omitted.
+- Java 17 (or newer) configured for Gradle builds. If your environment defaults to Java 25, use the `GRADLE_JAVA_HOME` variable to point the Gradle runtime to a compatible JDK (17–21).
+- Network access so the lightweight wrapper scripts can download Gradle 8.7 on first use.
 - A Firebase project with Authentication, Cloud Firestore, and Storage enabled.
 
 ## Getting started
 1. **Clone** this repository and open it with Android Studio *(File → Open… → select the project root)*.
 2. **Add Firebase configuration:** download your `google-services.json` from the Firebase Console and place it in `app/`.
-3. **Sync Gradle:** Android Studio will automatically download dependencies using its bundled Gradle distribution. If you prefer the CLI, install Gradle 8.6+ or regenerate the wrapper locally (`gradle wrapper`).
+3. **Sync Gradle:** Android Studio will automatically download dependencies using its bundled Gradle distribution. If you prefer the CLI, run the provided `./gradlew` script (it downloads Gradle 8.7 for you) or point an existing Gradle 8.7+ install at the project.
 4. **Configure Firestore Security Rules** that align with your Care Profile sharing model before running a release build.
 5. **Run the app:** connect a device/emulator and click **Run**. Login or create an account, then follow the prompts to create a Care Profile and add entries.
 
 ### Command-line build
-Because the repository excludes binary artifacts, the Gradle wrapper is not committed. Use a locally installed Gradle distribution (8.6+ recommended) and run:
+Run the included wrapper script, which lazily downloads the Gradle 8.7 distribution into `.gradle-dist/` and reuses it on future runs:
 ```
-gradle assembleDebug
+./gradlew assembleDebug
+```
+If your default Java installation is incompatible with Gradle (e.g., Java 25), export a compatible runtime before invoking the wrapper:
+```
+export GRADLE_JAVA_HOME=$(/usr/libexec/java_home -v 21)
+./gradlew assembleDebug
 ```
 The output APK will be located under `app/build/outputs/apk/debug/`.
 
