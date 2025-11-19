@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Memory Journal"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MemoryJournal">
+        <activity
+            android:name=".ui.AddEntryActivity"
+            android:exported="false"
+            android:label="Add Memory" />
+        <activity
+            android:name=".ui.CareProfileActivity"
+            android:exported="false"
+            android:label="Care Profile" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:exported="false"
+            android:label="Register" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
