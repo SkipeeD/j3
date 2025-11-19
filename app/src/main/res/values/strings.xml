@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Memory Journal</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="care_profile">Care Profile</string>
+    <string name="add_entry">Add Entry</string>
+    <string name="entries">Entries</string>
+    <string name="tags">Tags</string>
+    <string name="profile_stats">%1$d entries stored</string>
+    <string name="create_profile">Create Care Profile</string>
+    <string name="create_profile_message">No Care Profile found. Create a new one to get started.</string>
+    <string name="select_event_date">Select event date</string>
+    <string name="saving">Saving…</string>
+    <string name="record_audio">Record Audio</string>
+    <string name="stop_recording">Stop Recording</string>
+</resources>

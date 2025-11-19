@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/profileHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Care Profile"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+    <TextView
+        android:id="@+id/profileNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile notes"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/profileStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0 entries"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/addEntryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Entry" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/entryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

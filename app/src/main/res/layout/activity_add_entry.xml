@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title" />
+
+        <EditText
+            android:id="@+id/noteInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/tagInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tags (comma separated)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/selectDateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Event Date"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/addMediaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attach Photo"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/recordAudioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Record Audio"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/saveEntryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Entry"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>

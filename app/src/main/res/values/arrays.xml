@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="roles">
+        <item>Caregiver</item>
+        <item>FamilyMember</item>
+        <item>Patient</item>
+    </string-array>
+</resources>
